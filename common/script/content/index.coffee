@@ -1100,27 +1100,27 @@ _.each api.dropEggs, (egg,key) ->
 
 api.questEggs =
   # value & other defaults set below
-  Gryphon:          text: t('questEggGryphonText'),  adjective: t('questEggGryphonAdjective'), canBuy: ((u)-> u.achievements.quests.gryphon? > 0)
-  Hedgehog:         text: t('questEggHedgehogText'), adjective: t('questEggHedgehogAdjective'), canBuy: ((u)-> u.achievements.quests.hedgehog? > 0)
-  Deer:             text: t('questEggDeerText'), adjective: t('questEggDeerAdjective'), canBuy: ((u)-> u.achievements.quests.ghost_stag? > 0)
+  Gryphon:          text: t('questEggGryphonText'),  adjective: t('questEggGryphonAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.gryphon? > 0)
+  Hedgehog:         text: t('questEggHedgehogText'), adjective: t('questEggHedgehogAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.hedgehog? > 0)
+  Deer:             text: t('questEggDeerText'), adjective: t('questEggDeerAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.ghost_stag? > 0)
   Egg:              text: t('questEggEggText'), adjective: t('questEggEggAdjective'), mountText: t('questEggEggMountText')
-  Rat:              text: t('questEggRatText'), adjective: t('questEggRatAdjective'), canBuy: ((u)-> u.achievements.quests.rat? > 0)
-  Octopus:          text: t('questEggOctopusText'), adjective: t('questEggOctopusAdjective'), canBuy: ((u)-> u.achievements.quests.octopus? > 0)
-  Seahorse:         text: t('questEggSeahorseText'), adjective: t('questEggSeahorseAdjective'), canBuy: ((u)-> u.achievements.quests.dilatory_derby? > 0)
-  Parrot:           text: t('questEggParrotText'), adjective: t('questEggParrotAdjective'), canBuy: ((u)-> u.achievements.quests.harpy? > 0)
-  Rooster:          text: t('questEggRoosterText'), adjective: t('questEggRoosterAdjective'), canBuy: ((u)-> u.achievements.quests.rooster? > 0)
-  Spider:           text: t('questEggSpiderText'), adjective: t('questEggSpiderAdjective'), canBuy: ((u)-> u.achievements.quests.spider? > 0)
-  Owl:              text: t('questEggOwlText'), adjective: t('questEggOwlAdjective'), canBuy: ((u)-> u.achievements.quests.owl? > 0)
-  Penguin:          text: t('questEggPenguinText'), adjective: t('questEggPenguinAdjective'), canBuy: ((u)-> u.achievements.quests.penguin? > 0)
-  TRex:             text: t('questEggTRexText'), adjective: t('questEggTRexAdjective'), canBuy: ((u)-> (u.achievements.quests.trex? > 0 or u.achievements.quests.trex_undead? > 0))
-  Rock:             text: t('questEggRockText'), adjective: t('questEggRockAdjective'), canBuy: ((u)-> u.achievements.quests.rock? > 0)
-  Bunny:            text: t('questEggBunnyText'), adjective: t('questEggBunnyAdjective'), canBuy: ((u)-> u.achievements.quests.bunny? > 0)
-  Slime:            text: t('questEggSlimeText'), adjective: t('questEggSlimeAdjective'), canBuy: ((u)-> u.achievements.quests.slime? > 0)
-  Sheep:            text: t('questEggSheepText'), adjective: t('questEggSheepAdjective'), canBuy: ((u)-> u.achievements.quests.sheep? > 0)
-  Cuttlefish:       text: t('questEggCuttlefishText'), adjective: t('questEggCuttlefishAdjective'), canBuy: ((u)-> u.achievements.quests.kraken? > 0)
-  Whale:            text: t('questEggWhaleText'), adjective: t('questEggWhaleAdjective'), canBuy: ((u)-> u.achievements.quests.whale? > 0)
-  Cheetah:          text: t('questEggCheetahText'), adjective: t('questEggCheetahAdjective'), canBuy: ((u)-> u.achievements.quests.cheetah? > 0)
-  Horse:            text: t('questEggHorseText'), adjective: t('questEggHorseAdjective'), canBuy: ((u)-> u.achievements.quests.horse? > 0)
+  Rat:              text: t('questEggRatText'), adjective: t('questEggRatAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.rat? > 0)
+  Octopus:          text: t('questEggOctopusText'), adjective: t('questEggOctopusAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.octopus? > 0)
+  Seahorse:         text: t('questEggSeahorseText'), adjective: t('questEggSeahorseAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.dilatory_derby? > 0)
+  Parrot:           text: t('questEggParrotText'), adjective: t('questEggParrotAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.harpy? > 0)
+  Rooster:          text: t('questEggRoosterText'), adjective: t('questEggRoosterAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.rooster? > 0)
+  Spider:           text: t('questEggSpiderText'), adjective: t('questEggSpiderAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.spider? > 0)
+  Owl:              text: t('questEggOwlText'), adjective: t('questEggOwlAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.owl? > 0)
+  Penguin:          text: t('questEggPenguinText'), adjective: t('questEggPenguinAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.penguin? > 0)
+  TRex:             text: t('questEggTRexText'), adjective: t('questEggTRexAdjective'), canBuy: ((u)-> (u.achievements.quests && (u.achievements.quests.trex? > 0 or u.achievements.quests.trex_undead? > 0)))
+  Rock:             text: t('questEggRockText'), adjective: t('questEggRockAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.rock? > 0)
+  Bunny:            text: t('questEggBunnyText'), adjective: t('questEggBunnyAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.bunny? > 0)
+  Slime:            text: t('questEggSlimeText'), adjective: t('questEggSlimeAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.slime? > 0)
+  Sheep:            text: t('questEggSheepText'), adjective: t('questEggSheepAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.sheep? > 0)
+  Cuttlefish:       text: t('questEggCuttlefishText'), adjective: t('questEggCuttlefishAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.kraken? > 0)
+  Whale:            text: t('questEggWhaleText'), adjective: t('questEggWhaleAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.whale? > 0)
+  Cheetah:          text: t('questEggCheetahText'), adjective: t('questEggCheetahAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.cheetah? > 0)
+  Horse:            text: t('questEggHorseText'), adjective: t('questEggHorseAdjective'), canBuy: ((u)-> u.achievements.quests && u.achievements.quests.horse? > 0)
 
 _.each api.questEggs, (egg,key) ->
   _.defaults egg,
@@ -1143,6 +1143,7 @@ api.specialPets =
   'JackOLantern-Base':  'jackolantern'
   'Mammoth-Base':       'mammoth'
   'Tiger-Veteran':      'veteranTiger'
+  'Phoenix-Base':       'phoenix'
 
 api.specialMounts =
   'BearCub-Polar':       'polarBear'
@@ -1152,6 +1153,8 @@ api.specialMounts =
   'Mammoth-Base':        'mammoth'
   'Orca-Base':           'orca'
   'Gryphon-RoyalPurple': 'royalPurpleGryphon'
+  'Phoenix-Base':        'phoenix'
+  'JackOLantern-Base':   'jackolantern'
 
 api.timeTravelStable =
   pets:
@@ -1344,6 +1347,45 @@ api.quests =
         {type: 'food', key: 'CottonCandyPink', text: t('foodCottonCandyPink')}
         {type: 'food', key: 'CottonCandyBlue', text: t('foodCottonCandyBlue')}
         {type: 'food', key: 'Honey', text: t('foodHoney')}
+      ]
+      gp: 0
+      exp: 0
+
+  burnout:
+    text: t('questBurnoutText')
+    notes: t('questBurnoutNotes')
+    completion: t('questBurnoutCompletion')
+    completionChat: t('questBurnoutCompletionChat')
+    value: 0
+    canBuy: (()->false)
+    category: 'world'
+    boss:
+      name: t('questBurnoutBoss')
+      hp: 11000000
+      str: 2.5
+      def: 1
+      rage:
+        title: t('questBurnoutBossRageTitle')
+        description: t('questBurnoutBossRageDescription')
+        value: 1000000
+        quests: t('questBurnoutBossRageQuests')
+        seasonalShop: t('questBurnoutBossRageSeasonalShop')
+        tavern: t('questBurnoutBossRageTavern')
+    drop:
+      items: [
+        {type: 'pets', key: 'Phoenix-Base', text: t('questBurnoutDropPhoenixPet')}
+        {type: 'mounts', key: 'Phoenix-Base', text: t('questBurnoutDropPhoenixMount')}
+
+        {type: 'food', key: 'Candy_Base', text: t('foodCandyBase')}
+        {type: 'food', key: 'Candy_White', text: t('foodCandyWhite')}
+        {type: 'food', key: 'Candy_Desert', text: t('foodCandyDesert')}
+        {type: 'food', key: 'Candy_Red', text: t('foodCandyRed')}
+        {type: 'food', key: 'Candy_Shade', text: t('foodCandyShade')}
+        {type: 'food', key: 'Candy_Skeleton', text: t('foodCandySkeleton')}
+        {type: 'food', key: 'Candy_Zombie', text: t('foodCandyZombie')}
+        {type: 'food', key: 'Candy_CottonCandyPink', text: t('foodCandyCottonCandyPink')}
+        {type: 'food', key: 'Candy_CottonCandyBlue', text: t('foodCandyCottonCandyBlue')}
+        {type: 'food', key: 'Candy_Golden', text: t('foodCandyGolden')}
       ]
       gp: 0
       exp: 0
